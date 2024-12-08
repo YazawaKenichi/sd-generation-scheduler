@@ -16,6 +16,11 @@ class GenerationScheduler(scripts.Script):
         with gr.Accordion(f"{self.title()}", open=False):
             # とりあえずテキストボックス一つでやってみる
             with gr.Row():
+                gr.Textbox(
+                    value="SOIYA",
+                    placeholder="TEXTBOX",
+                    label="LABEL",
+                )
         return [enable, token, notificationDisabled]
 
     def get_now_time(self):
@@ -23,5 +28,5 @@ class GenerationScheduler(scripts.Script):
         return n.strftime("%H:%M:%S")
 
     # setup が良い感じ？
-    def setup(self, p, *args):
+    # def setup(self, p, *args):
 
